@@ -109,7 +109,7 @@ let medias = [
       file_type: 'jpg',
       file_alt: 'file alt',
       file_src_cover: 'img6.jpg',
-      file_description: "Modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem"
+      file_description: ""
    },
    {
       title: "Image 7",
@@ -121,7 +121,7 @@ let medias = [
    },
    {
       title: "Image 8",
-      file_src: "img8.jpg",
+      file_src: "https://www.youtube.com/embed/M7lc1UVf-VE",
       file_type: 'mp4',
       file_alt: 'file alt',
       file_src_cover: 'img8.jpg',

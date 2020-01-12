@@ -21,7 +21,7 @@
             >Notre équipe</a></li>
             <li> <a href="#section4" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('section4')}"
-            >Materiels</a></li>
+            >Notre matériels</a></li>
             <li> <a href="#section5" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('section5')}"
             >Contact</a></li>
@@ -55,13 +55,13 @@
                   </span>
               </button>
           </div>
-          <div class="nav-close nav-mobile  absolute top-0 ml-10 z-2 pt-12 pb-2" v-bind:class="{'is-active' : navOpen }">
+          <div class="nav-close nav-mobile absolute top-0 w-full z-2 py-6 " v-bind:class="{'is-active' : navOpen }">
               <ul class="nav-close text-center">
-                <li><a href="#" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section1')}">Accueil</a></li>
-                <li><a href="#" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section2')}">Services</a></li>
-                <li><a href="#" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section3')}">Equipes</a></li>
-                <li><a href="#" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section4')}">Materiel</a></li>
-                <li><a href="#" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section5')}">Contact</a></li>
+                <li><a href="#section1" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section1')}">Accueil</a></li>
+                <li><a href="#section2" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section2')}">Nos services</a></li>
+                <li><a href="#section3" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section3')}">Notre équipes</a></li>
+                <li><a href="#section4" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section4')}">Notre materiel</a></li>
+                <li><a href="#section5" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section5')}">Contact</a></li>
               </ul>
           </div>
       </div>
@@ -130,7 +130,7 @@ export default {
 
 
 .nav-mobile{
-  background: rgba(255,255,255,.4);
+  background: rgba(255,255,255,.9);
   transform: translateY(-100%);
   opacity: 0;
   transition: transform .4s ease, opacity .2s ease;
@@ -157,7 +157,7 @@ export default {
   font: inherit;
   color: inherit;
   text-transform: none;
-  background-color: #ff6600;
+ @apply bg-orange-100;
   border-radius: 50%;
   border: 0;
   margin: 0;

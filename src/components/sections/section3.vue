@@ -10,7 +10,7 @@
                         <div class="hidden lg:block w-full  lg:w-1/2"> 
                         </div>                     
                         <div class=" w-full lg:w-1/2 lg:flex lg:flex-col">
-                           <h2 class="title text-green-100 text-4xl text-center w-full mb-10 ">Notre équipe</h2>
+                           <h2 class="title text-green-100 text-4xl text-center w-full mb-10 italic ">Notre équipe</h2>
                            <div class="w-full   lg:hidden">
                                  <img src="@/assets/images/bg-3.jpg" alt="">
                            </div>
@@ -64,7 +64,7 @@ export default {
     width: 100%;
   }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .customContainer {
       max-width: 1024px;
   }

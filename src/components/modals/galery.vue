@@ -13,24 +13,21 @@
              
                <h3 class="title text-orange-100 text-center text-4xl " >Galerie</h3>
                
-               <div class="flex flex-col justify-center items-center w-full relative h-full mt-4 mb-0">
+               <div class="flex flex-col justify-center items-center w-full relative h-full mt-4 mb-0"  style="max-height: 65%;">
                     <div @click="prevSelected" class="absolute h-10 w-10  top-0 left-0 z-50 hover:cursor-pointer" style="top:50%; transform:rotate(180deg)" >
-                       <svg class="fill-current text-orange-100"
-                           viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" >
-                              <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
-                                                "/>
+                       <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                           <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
                         </svg>
                     </div>
                     <div @click="nextSelected" class="absolute h-10 w-10  top-0 right-0 z-50 hover:cursor-pointer" style="top:50%;">
-                       <svg  class="fill-current text-orange-100"
-                           viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" >
-                              <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
-                                                "/>
-                        </svg>
+                      <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                        <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
+                     </svg>
                     </div>
-                  <div class="w-full h-full  overflow-hidden ">
+                     <v-touch v-on:swipeleft="nextSelected" v-on:swiperight="prevSelected" 
+                   v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}"
+                   class="w-full h-full  overflow-hidden ">
+                 
                      <img v-if="getSelected.file_type == 'jpg'" :src="srcMediaSelected" class="image-selected rounded border border-white" :alt="getSelected.file_alt" :title="getSelected.title" >
                      <div v-else class="h-full w-full">
                         <iframe id="ytplayer" type="text/html" width="100%" height="100%"
@@ -38,7 +35,7 @@
                            frameborder="0" allowfullscreen></iframe>
                      </div>
                      
-                  </div>
+                  </v-touch>
                   <div class="mt-3 italic" style="color: #525252">
                         {{getSelected.file_description}}
                      </div>

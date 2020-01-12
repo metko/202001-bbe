@@ -1,6 +1,7 @@
 <template>
   <div id="app" @click="clickBody">
       <navigation ref="navigation" :activeClass="activeClass"></navigation>
+      
       <actions></actions>
       <component v-for="(section, index) in sections" :key="index" 
         v-bind:is="section.name"
@@ -8,7 +9,10 @@
         v-on:set-active-class="setActiveClass" ></component>
 
         <transition name='modal'>
-          <contactModal v-if="contactModalOpen"></contactModal>
+          <contactModal ref="contactModal" v-if="contactModalOpen"></contactModal>
+        </transition>
+        <transition name='sharemodal'>
+          <shareModal ref="shareModal" v-if="shareModalOpen"></shareModal>
         </transition>
         
   </div>
@@ -17,7 +21,10 @@
 <script>
 import navigation from "./components/navigation.vue"
 import actions from "./components/actions.vue"
-import contactModal from "./components/contactModal.vue"
+
+import contactModal from "./components/modals/contact.vue"
+import shareModal from "./components/modals/share.vue"
+
 import section1 from "./components/sections/section1.vue"
 import section2 from "./components/sections/section2.vue"
 import section3 from "./components/sections/section3.vue"
@@ -28,14 +35,15 @@ import data from './data.js'
 export default {
   name: 'app',
   components: {
-    navigation, actions, section1, section2, section3, section4, section5, contactModal
+    navigation, actions, section1, section2, section3, section4, section5, contactModal, shareModal
   },
   data(){
     return {
       activeClass: "",
       sections : data.sections, 
       spies : [],
-      contactModalOpen: false
+      contactModalOpen: false,
+      shareModalOpen: false
     }
   },
   mounted() {
@@ -69,12 +77,29 @@ export default {
               vm.setActiveClass(spy.id)
           }
       })
-    }    
+    },
+
+    openContactModal() {
+      this.contactModalOpen = true
+    },
+    openShareModal() {
+      this.shareModalOpen = true
+    }
   }
 }
 </script>
 
 <style lang="scss">
+
+html, body {
+   scroll-behavior: smooth;
+   font-family: "PT sans", 'sans-serif', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"';
+}
+
+.title{
+   font-family: "Merriweather", 'Georgia','Cambria','"Times New Roman"','Times';
+}
+
 .button {
     -ms-transform: skewX(-15deg); /* IE 9 */
     -webkit-transform: skewX(-15deg); /* Safari */
@@ -96,6 +121,17 @@ export default {
 .modal-enter, .modal-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateY(50px) scale(.8);
+  opacity: 0;
+}
+
+.sharemodal-enter-active {
+  transition: all .4s ease;
+}
+.sharemodal-leave-active {
+  transition: all .4s ease;
+}
+.sharemodal-enter, .sharemodal-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 

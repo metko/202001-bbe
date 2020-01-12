@@ -8,45 +8,42 @@
                v-for="(slide, index) in slides" :key="index" class="nav-tab hover:cursor-pointer">{{slide.tab_name}}</li>
             </ul>
          </div>
-         <div class="flex  h-full flex-grow mt-4 relative ">
+         <div class="flex h-full flex-grow mt-4 relative" >
           
-               <div @click="prevSlide" class="control_right  w-12 h-12 hover:pointer hidden md:block">
-                   <svg  class="fill-current text-orange-100" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" >
-                     <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                        c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
-                        "/>
-                  </svg>
-               </div>
+         <div @click="prevSlide" class="control_right  w-12 h-12 hover:pointer hidden md:block">
+            <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+               <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
+            </svg>
+         </div>
 
-               <div class=" h-full flex flex-wrap w-full">
-                  <div class="w-full lg:w-1/2 flex flex-col flex-grow">          
-                     <transition :name="animationName" mode="out-in">
-                        <component v-bind:is="'contentSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
-                     </transition>
-                    
-                  </div>
+         <v-touch v-on:swipeleft="nextSlide" v-on:swiperight="prevSlide" 
+               v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}"
+            class=" h-full flex flex-wrap w-full">
 
-                  <div class="w-full lg:w-1/2">
-                     <transition :name="animationName" mode="out-in">
-                        <component v-bind:is="'imageSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
-                     </transition>
-                  </div>
-               </div>
-
-               <div @click="nextSlide" class=" arrow-right control_left  ml-auto w-12 h-12 pointer  hidden md:block">
-                  <svg  class="fill-current text-orange-100" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" >
-                     <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                        c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
-                        "/>
-                  </svg>
-               </div>
-
+            <div class="w-full lg:w-1/2 flex flex-col flex-grow">          
+               <transition :name="animationName" mode="out-in">
+                  <component v-bind:is="'contentSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
+               </transition>
             </div>
-         
-       
+
+            <div class="w-full lg:w-1/2">
+               <transition :name="animationName" mode="out-in">
+                  <component v-bind:is="'imageSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
+               </transition>
+            </div>
+
+         </v-touch >
+
+         <div @click="nextSlide" class=" arrow-right control_left  ml-auto w-12 h-12 pointer  hidden md:block">
+            <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+               <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
+            </svg>
+         </div>
+
+      </div>
+
    </div>
 </template>
-
 <script>
 import contentSlide from "./contentSlide.vue"
 import imageSlide from "./imageSlide.vue"
@@ -83,11 +80,12 @@ export default {
          }else{
             this.setActiveSlide(this.activeSlide + 1)
          }
-
       }
    },
    mounted() {
       this.totalSlide = this.slides.length
+      console.log(this.slides)
+
    },
    data() {
       return {

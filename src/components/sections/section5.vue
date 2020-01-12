@@ -2,52 +2,82 @@
       <section :ref="section.name" :id="section.name" data-spy 
       class="  w-full bg-orange-100 pb-20 lg:pb-0">
          <div class=" h-full overflow-hidden pt-24 mx-auto flex flex-col" >
-            <h2 class="title-section title text-4xl text-center text-white flex-grow-0">Gallerie</h2>
+            <h2 class="title-section title text-4xl text-center text-white flex-grow-0 italic">Galerie</h2>
             <div class="content-section flex flex-col h-full">
-               <div class="main-carousel mt-6 bg-orange-300">
-                     <div v-for="(media, index) in medias" :key="index" class="carousel-cell w-1/2 md:w-1/3 lg:w-1/4  " >
-                        <div class="flex h-full w-full items-center justify-around" 
-                        @click='openGallery(index)'>
-                           <div class="h-full w-full flex items-center justify-center " style="background-image:url('https://loremflickr.com/200/200'); background-size:cover" >
-                              <div v-if="media.file_type == 'mp4'" class="w-1/4 icon-video">
-                                 <img :src="require('@/assets/images/video.svg')" alt="" class="max-w-1/3">
+               <div class="relative mt-6">
+                  <div class="arrow-flickity arrow-flickity-left hover:cursor-pointer" @click="nextSlide()">
+                     <flecheSvg></flecheSvg>
+                  </div>
+                  <div class="arrow-flickity arrow-flickity-right hover:cursor-pointer" @click="previousSlide()">
+                     <flecheSvg></flecheSvg>
+                  </div>
+
+                  <div class="main-carousel  bg-orange-300 ">
+                     <!-- arrow -->
+                        <div v-for="(media, index) in medias" :key="index" class="carousel-cell w-1/2 md:w-1/3 lg:w-1/4  " >
+                           <div class="flex h-full w-full items-center justify-around" 
+                           @click='openGallery(index)'>
+                              <div class="h-full w-full flex items-center justify-center " style="background-image:url('https://loremflickr.com/200/200'); background-size:cover" >
+                                 <div v-if="media.file_type == 'mp4'" class="w-1/4 icon-video">
+                                    <img :src="require('@/assets/images/video.svg')" alt="" class="max-w-1/3">
+                                 </div>
                               </div>
                            </div>
                         </div>
-                     </div>
+                  </div>
                </div>
 
                <div class=" mt-20 mx-auto container flex flex-grow h-full mb-10 flex flex-wrap px-10">
                      <div class="w-full lg:w-2/5 ">
-                           <h2 class="title text-white text-4xl italic leading-none">Contact</h2>
-                           <div class="" style="color:#f7c690">Prendre un rendez-vous, demande de devis etc ...</div>
-                           <form action="#" method="POST" class="flex flex-col mt-6 " v-on:submit.prevent="submitForm">
-                                 <input type="text" name="name" class="w-3/4 mb-3 py-2 px-2 focus:outline-none" placeholder="Nom/prénom">
-                                 <input type="text"  name="object" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Objet">
-                                 <input type="email"  name="email" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Email">
-                                 <textarea   name="message" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Votre message" rows="5"></textarea>
+                           <h2 class="title text-white text-4xl italic leading-none italic">Contact</h2>
+                           <div class="italic" style="color:#f7c690">Prendre un rendez-vous, demande de devis etc ...</div>
+                           <transition name="slide-top" mode="out-in">
+                           
+                          
+                           <form v-if="!isSending && !responseMessage" action="#" method="POST" class="flex flex-col mt-6 " key="form" v-on:submit.prevent="submitForm">
+                                 <input type="text" name="name" v-model="name" class="w-3/4 mb-3 py-2 px-2 focus:outline-none" placeholder="Nom/prénom">
+                                 <input type="text"  name="object" v-model="object" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Objet">
+                                 <input type="email"  name="email" v-model="email" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Email">
+                                 <textarea   name="message" v-model="message" class="w-full mb-3 py-2 px-2 focus:outline-none" placeholder="Votre message" rows="5"></textarea>
+                                  <vue-recaptcha sitekey="6LefJb8UAAAAALWVuXvr8_K8V6d9RIpKDXpcPmTr" 
+                                   ref="recaptcha"
+                                    @verify="onVerify"
+                                  
+                                  :loadRecaptchaScript="true"></vue-recaptcha>
+                                 <div class="text-sm italic text-orange-300">Merci de remplir tous les champs</div>
+
                                  <div class="flex justify-end">
-                                    <button class="px-3 py-2 text-white relative flex items-center" style="background: #cc6600;">
+                                    <button :disabled="!formIsValid()" v-bind:class="{'opacity-25' : !formIsValid()}"
+                                    class="px-3 py-2 text-white relative flex items-center bg-orange-600 hover:bg-orange-700 italic" >
                                        Envoyer
                                        <svg class="fill-current text-white  inline-block h-8 w-8 -mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                           <path class="cls-1" d="M16.74,44.33a1,1,0,0,1-.46-.12.94.94,0,0,1-.49-1L17.67,29l.45-2.19A.9.9,0,0,1,18,26.5L16.65,25,8.06,14.42a1,1,0,0,1,.81-1.56L47.3,15.58a1,1,0,0,1,.84.66,1,1,0,0,1-.28,1L17.37,44.09A.94.94,0,0,1,16.74,44.33ZM20,27.07l-.47,2.27L18,41,42.9,19.07ZM10.94,14.93l7.15,8.85,1.38,1.45,23.05-8.06Z"/>
                                        </svg>  
                                     </button>
+
                                  </div>
+
                            </form>
+                           <div v-else class="flex flex-col mt-6 " key="message">
+                                 <div class="px-3 py-2 bg-red-700 text-white rounded" v-bind:class="{'bg-green-500' : statut=='success'}">
+                                    {{responseMessage}}                                    
+                                 </div>
+                           </div>
+                            </transition>
+
                      </div>
                      <div class="w-full lg:w-1/5 hidden lg:flex lg:items-center">
                          <img :src="require('@/assets/images/logo-be-1.svg')" alt="" title="" class="w-full -mt-10"/>
                      </div>
                      <div  class="w-full lg:w-2/5  mt-16 lg:mt-0">
-                        <h3 class="title text-white text-xl italic lg:text-right">Nous intervenons dans la région <span class="text-orange-300">ouest et sud</span>. Pour toute demande d’informations nous contacter !</h3>
+                        <h3 class="title text-white text-xl italic lg:text-right">Nous intervenons dans les régions <span class="text-orange-300">ouest et sud</span>. Pour toutes demandes d’informations nous contacter!</h3>
                         <div class="flex lg:justify-end my-6">
                            <div class="mr-3 mt-1">
                               <svg class="fill-current text-white  inline-block h-8 w-8 -mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                   <path class="cls-1" d="M16.74,44.33a1,1,0,0,1-.46-.12.94.94,0,0,1-.49-1L17.67,29l.45-2.19A.9.9,0,0,1,18,26.5L16.65,25,8.06,14.42a1,1,0,0,1,.81-1.56L47.3,15.58a1,1,0,0,1,.84.66,1,1,0,0,1-.28,1L17.37,44.09A.94.94,0,0,1,16.74,44.33ZM20,27.07l-.47,2.27L18,41,42.9,19.07ZM10.94,14.93l7.15,8.85,1.38,1.45,23.05-8.06Z"/>
                               </svg>  
                            </div>
-                           <div><a href="contact@bourbonelagage.re" class="text-white underline text-xl">contact@bourbonelagage.re</a></div>
+                           <div><a href="mailto:dsd974@hotmail.com" class="text-white underline text-xl">dsd974@hotmail.com</a></div>
                         </div>
                         <div class="flex lg:justify-end my-6">
                            <div class="mr-3 ">
@@ -70,9 +100,10 @@
                               </svg>
                            </div>
                            <div class=" text-left lg:text-right">
-                              <div class="text-white underline text-xl">Bourbon Elagage</div>
+                              <a href="https://goo.gl/maps/7umgERgYxMFzZVzX6" target="_blank" class="text-white underline text-xl">Bourbon Elagage</a>
                               <div class="text-white  text-xl">46 rue du lycée</div>
                               <div class="text-white  text-xl">97422 la Saline</div>
+                              <div class="text-white  text-xl">Île de la Réunion </div>
                            </div>
                            
                         </div>
@@ -93,37 +124,52 @@
 </template>
 
 <script>
+
 import Flickity from 'flickity'
 import gallery from '@/gallery.js'
-import galleryModal from '@/components/galleryModal.vue'
+import galleryModal from '@/components/modals/galery.vue'
+import VueRecaptcha from 'vue-recaptcha';
+import Form from '@/form.js';
+import flecheSvg from '@/components/flecheSvg.vue';
 
 export default {
    name: "section5",
    props: {section:Object},
    components: {
-      galleryModal
+      galleryModal,
+      VueRecaptcha,
+      flecheSvg
   },
   mounted() {
          var elem = document.querySelector('.main-carousel');
-         new Flickity( elem, {
+         this.flickity = new Flickity( elem, {
           freeScroll: true,
             contain: true,
             // disable previous & next buttons and dots
-            prevNextButtons: true,
+            prevNextButtons: false,
             pageDots: true,
             wrapAround: true,
             draggable: false,
             groupCells: 2,
-            lazyLoad: 2
+            lazyLoad: 2,
+            
  
          });
-
-         
+   
   },
   data() {
      return {
         galleryOpen: false,
-        selected : 0
+        selected : 0,
+        name: "",
+        object: "",
+        message: "",
+        email: "",
+        responseMessage: "",
+        isSending : false,
+        statut : '',
+        verify : false,
+        flickity : ""
      }
   },
   computed: {
@@ -132,10 +178,12 @@ export default {
      }
   },
   methods: {
+      
       openGallery(index) {
          this.selected = index
          this.galleryOpen = true
       },
+      
       nextSelected() {
          if(this.selected == this.medias.length - 1) {
             this.selected = 0
@@ -143,6 +191,7 @@ export default {
             this.selected++
          }
       },
+
       previousSelected() {
          if(this.selected == 0) {
             this.selected = this.medias.length - 1
@@ -150,26 +199,32 @@ export default {
             this.selected = this.selected-1
          }
       },
+
       selectSlide(index) {    
             this.selected = index    
       },
+      nextSlide() {
+            this.flickity.next( true, false)
+      },
+      previousSlide() {
+         this.flickity.previous( true, false)
+      },
+        
+
+      formIsValid() {
+         if(Form.formIsValid(this)){
+            return true
+         }
+         return false
+      },
+
       submitForm() {
-         let httpRequest = new XMLHttpRequest();
-         httpRequest.onreadystatechange = function() {
-            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-               if (httpRequest.status === 200) {
-                  var response = JSON.parse(httpRequest.responseText);
-                  alert(response.computedString);
-               } else {
-                  alert('Un problème est survenu avec la requête.');
-               }
-            }
-         };
-          httpRequest.open('POST', "https://formcarry.com/s/LuLoMxbAggQ");
-          httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-          httpRequest.setRequestHeader('Accept', 'application/json');
-         httpRequest.send('userName=toto');
-      }
+         Form.submitForm(this)
+      },
+
+      onVerify: function(recaptchaToken) {
+         Form.onVerify(this, recaptchaToken)  
+      },
   }
 }
 </script>
@@ -177,14 +232,21 @@ export default {
 <style >
 @import url('https://unpkg.com/flickity@2/dist/flickity.min.css');
 
-.main-carousel {
-  /* background: #EEE; */
+
+.slide-top-enter-active {
+  transition: all .4s ease;
+}
+.slide-top-leave-active {
+  transition: all .4s ease;
+}
+.slide-top-enter, .slide-top-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .carousel-cell {
-  /* width: 25%; */
   height: 200px;
-  /* margin-right: 10px; */
 
 }
 .carousel-cell:hover {
@@ -198,6 +260,22 @@ export default {
 .carousel-cell:hover .icon-video {
  transform: scale(1.1)
 }
+.arrow-flickity{
+   @apply  w-16 absolute z-10;
+   top:50%;
+   
+}
+
+.arrow-flickity-right{
+   @apply right-0;
+   transform: translateY(-50%);
+}
+
+.arrow-flickity-left{
+   @apply left-0;
+   transform: rotate(180deg)  translateY(50%);
+}
+
 
 /* cell number */
 

@@ -41,7 +41,7 @@ let submitForm = function(self) {
    };
    
 
-      httpRequest.open("POST", "/handleForm.php");
+      httpRequest.open("POST", "/hey.php");
       httpRequest.setRequestHeader("Accept", "*/*");
       httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 

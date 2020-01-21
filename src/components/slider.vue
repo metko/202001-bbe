@@ -10,11 +10,11 @@
          </div>
          <div class="flex h-full flex-grow mt-4 relative" >
           
-         <div @click="prevSlide" class="control_right  w-12 h-12 hover:pointer hidden md:block">
+         <!-- <div @click="prevSlide" class="control_right  w-12 h-12 hover:pointer hidden md:block">
             <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
             </svg>
-         </div>
+         </div> -->
 
          <v-touch v-on:swipeleft="nextSlide" v-on:swiperight="prevSlide" 
                v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}"
@@ -34,11 +34,11 @@
 
          </v-touch >
 
-         <div @click="nextSlide" class=" arrow-right control_left  ml-auto w-12 h-12 pointer  hidden md:block">
+         <!-- <div @click="nextSlide" class=" arrow-right control_left  ml-auto w-12 h-12 pointer  hidden md:block">
             <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
             </svg>
-         </div>
+         </div> -->
 
       </div>
 
@@ -84,7 +84,7 @@ export default {
    },
    mounted() {
       this.totalSlide = this.slides.length
-      console.log(this.slides)
+      //console.log(this.slides)
 
    },
    data() {
@@ -98,12 +98,12 @@ export default {
 </script>
 
 <style scoped>
-.control_right{
+/* .control_right{
    transform: rotate(180deg);
 }
 .control_right:hover, .control_left:hover {
    cursor: pointer;
-}
+} */
 .nav-tab{
    @apply mx-4 px-0 my-3 uppercase text-orange-100 tracking-wider italic relative;
 }

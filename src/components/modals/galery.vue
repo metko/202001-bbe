@@ -28,7 +28,7 @@
                    v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}"
                    class="w-full h-full  overflow-hidden ">
                  
-                     <img v-if="getSelected.file_type == 'jpg'" :src="srcMediaSelected" class="image-selected rounded border border-white" :alt="getSelected.file_alt" :title="getSelected.title" >
+                     <img v-if="getSelected.file_type == 'jpg' || getSelected.file_type == 'png' || getSelected.file_type == 'gif'" :src="srcMediaSelected" class="image-selected rounded border border-white" :alt="getSelected.file_alt" :title="getSelected.title" >
                      <div v-else class="h-full w-full">
                         <iframe id="ytplayer" type="text/html" width="100%" height="100%"
                            :src="srcMediaSelected"
@@ -49,7 +49,7 @@
                   @click='selectSlide(index)'
                   >
                      <div class=" flex h-full w-full items-center justify-around" >
-                        <div class="h-full w-full flex justify-center items-center" style="background-image:url('https://loremflickr.com/200/200'); background-size:cover" >
+                        <div class="h-full w-full flex justify-center items-center" :style="'background-image:url(' + require('@/assets/images/gallery/thumbs/'+media.file_src_cover) + '); background-size:cover'" >
                            <div v-if="media.file_type == 'mp4'" class="w-1/4 icon-video">
                                  <img :src="require('@/assets/images/video.svg')" :alt="media.file_alt" :title="media.title" class="max-w-1/3">
                               </div>

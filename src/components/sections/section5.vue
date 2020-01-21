@@ -17,8 +17,8 @@
                         <div v-for="(media, index) in medias" :key="index" class="carousel-cell w-1/2 md:w-1/3 lg:w-1/4  " >
                            <div class="flex h-full w-full items-center justify-around" 
                            @click='openGallery(index)'>
-                              <div class="h-full w-full flex items-center justify-center " style="background-image:url('https://loremflickr.com/200/200'); background-size:cover" >
-                                 <div v-if="media.file_type == 'mp4'" class="w-1/4 icon-video">
+                              <div class="h-full w-full flex items-center justify-center " :style="'background-image:url(' + require('@/assets/images/gallery/thumbs/'+media.file_src_cover) + '); background-size:cover'" >
+                                 <div v-if="media.file_type == 'mp4'" class="w-1/4 icon-video"> 
                                     <img :src="require('@/assets/images/video.svg')" alt="" class="max-w-1/3">
                                  </div>
                               </div>

@@ -1,19 +1,9 @@
 let sections = [
-   {
-      name : 'section1'
-   },
-   {
-      name : 'section2'
-   },
-   {
-      name : 'section3'
-   },
-   {
-      name : 'section4'
-   },
-   {
-      name : 'section5'
-   }
+   {name : 'section1'},
+   {name : 'section2'},
+   {name : 'section3'},
+   {name : 'section4'},
+   {name : 'section5'}
 ];
 
 let services = [
@@ -23,20 +13,29 @@ let services = [
       content: "<p class='mt-4'>Bourbon Elagage dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p><p class='mt-4'>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>",
       images: [
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-            title: "title 1",
-            legend: "legend 1"
+            img_url : require("@/assets/images/services/elagage_1.jpg"),
+            title: "Elagage 1",
+            legend: "Elagage legend 1",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-            title: "title 2",
-            legend: "legend 2"
+            img_url : require("@/assets/images/services/elagage_2.jpg"),
+            title: "Elagage 2",
+            legend: "Elagage legend 2 dffd fds fdsf dsfdsf sdf sdfds fsd fds fs fds fdds  df dsf dsf dsf dsf dsf dsf ",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-            title: "title 3 ",
-            legend: "legend 3"
+            img_url : require("@/assets/images/services/elagage_3.jpg"),
+            title: "Elagage 3",
+            legend: "Elagage legend 3",
+            alt: "alt attr"
          },
+         {
+            img_url : require("@/assets/images/services/elagage_4.jpg"),
+            title: "Elagage 4",
+            legend: "Elagage legend 4",
+            alt: "alt attr"
+         }
       ]
    },
    {
@@ -45,19 +44,22 @@ let services = [
       content: 'content slide 2',
       images: [
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-            title: "title 1",
-            legend: "legend 1"
+            img_url : require("@/assets/images/services/abattage_1.jpg"),
+            title: "Abattage 1",
+            legend: "Abattage legend 1",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-            title: "title 2",
-            legend: "legend 2"
+            img_url : require("@/assets/images/services/abattage_2.jpg"),
+            title: "Abattage 2",
+            legend: "Abattage legend 2",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-            title: "title 3 ",
-            legend: "legend 3"
+            img_url : require("@/assets/images/services/abattage_3.jpg"),
+            title: "Abattage 3",
+            legend: "Abattage legend 3",
+            alt: "alt attr"
          },
       ]
    },
@@ -67,19 +69,22 @@ let services = [
       content: 'content slide 3',
       images: [
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-            title: "title 1",
-            legend: "legend 1"
+            img_url : require("@/assets/images/services/recyclage_1.jpg"),
+            title: "Recyclage 1",
+            legend: "Recyclage legend 1",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-            title: "title 2",
-            legend: "legend 2"
+            img_url : require("@/assets/images/services/recyclage_2.jpg"),
+            title: "Recyclage 2",
+            legend: "Recyclage legend 2",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-            title: "title 3 ",
-            legend: "legend 3"
+            img_url : require("@/assets/images/services/recyclage_3.jpg"),
+            title: "Recyclage 3",
+            legend: "Recyclage legend 3",
+            alt: "alt attr"
          },
       ]
    }
@@ -92,19 +97,22 @@ let materiels = [
       content: "<p class='mt-4'>Bourbon Elagage dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p><p class='mt-4'>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>",
       images: [
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-            title: "title 1",
-            legend: "legend 1"
+            img_url : require("@/assets/images/materiels/grimpe_1.jpg"),
+            title: "Grimpe 1",
+            legend: "Grimpe legend 1",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-            title: "title 2",
-            legend: "legend 2"
+            img_url : require("@/assets/images/materiels/grimpe_2.jpg"),
+            title: "Grimpe 2",
+            legend: "Grimpe legend 2",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-            title: "title 3 ",
-            legend: "legend 3"
+            img_url : require("@/assets/images/materiels/grimpe_3.jpg"),
+            title: "Grimpe 3",
+            legend: "Grimpe legend 3",
+            alt: "alt attr"
          },
       ]
    },
@@ -114,19 +122,47 @@ let materiels = [
       content: 'content slide 2',
       images: [
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-            title: "title 1",
-            legend: "legend 1"
+            img_url : require("@/assets/images/materiels/engein_1.jpg"),
+            title: "Engein 1",
+            legend: "Engein legend 1",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-            title: "title 2",
-            legend: "legend 2"
+            img_url : require("@/assets/images/materiels/engein_2.jpg"),
+            title: "Engein 2",
+            legend: "Engein legend 2",
+            alt: "alt attr"
          },
          {
-            img_url : "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-            title: "title 3 ",
-            legend: "legend 3"
+            img_url : require("@/assets/images/materiels/engein_3.jpg"),
+            title: "Engein 3",
+            legend: "Engein legend 3",
+            alt: "alt attr"
+         },
+      ]
+   },
+   {
+      tab_name: "Coupe",
+      title: 'title slide 3',
+      content: 'content slide 3',
+      images: [
+         {
+            img_url : require("@/assets/images/materiels/coupe_1.jpg"),
+            title: "Coupe 1",
+            legend: "Coupe legend 1",
+            alt: "alt attr"
+         },
+         {
+            img_url : require("@/assets/images/materiels/coupe_2.jpg"),
+            title: "Coupe 2",
+            legend: "Coupe legend 2",
+            alt: "alt attr"
+         },
+         {
+            img_url : require("@/assets/images/materiels/coupe_3.jpg"),
+            title: "Coupe 3",
+            legend: "Coupe legend 3",
+            alt: "alt attr"
          },
       ]
    }

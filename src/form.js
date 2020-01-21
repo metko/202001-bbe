@@ -11,7 +11,7 @@ let submitForm = function(self) {
    }
    self.isSending = true
 
-   var data = "name="+this.name+"&object="+this.object+"&message="+this.message+"&email="+self.email;
+   var data = "name="+self.name+"&object="+self.object+"&message="+self.message+"&email="+self.email;
 
    let httpRequest = new XMLHttpRequest();
    httpRequest.withCredentials = true;

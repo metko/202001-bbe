@@ -48,7 +48,7 @@ let submitForm = function(self) {
       httpRequest.send(data);
 }
 
-
+// eslint-disable-next-line
 let onVerify = function(self, token) {
    self.verify = true
    console.log('verify')

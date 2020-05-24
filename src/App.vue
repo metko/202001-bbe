@@ -25,17 +25,18 @@ import actions from "./components/actions.vue"
 import contactModal from "./components/modals/contact.vue"
 import shareModal from "./components/modals/share.vue"
 
-import section1 from "./components/sections/section1.vue"
-import section2 from "./components/sections/section2.vue"
-import section3 from "./components/sections/section3.vue"
-import section4 from "./components/sections/section4.vue"
-import section5 from "./components/sections/section5.vue"
+import accueil from "./components/sections/section1.vue"
+import services from "./components/sections/section2.vue"
+import equipe from "./components/sections/section3.vue"
+import materiels from "./components/sections/section4.vue"
+import contact from "./components/sections/section5.vue"
+
 import data from './data.js'
 
 export default {
   name: 'app',
   components: {
-    navigation, actions, section1, section2, section3, section4, section5, contactModal, shareModal
+    navigation, actions, accueil, services, equipe, materiels, contact, contactModal, shareModal
   },
   data(){
     return {

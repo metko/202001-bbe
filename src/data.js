@@ -1,9 +1,9 @@
 let sections = [
-   {name : 'section1'},
-   {name : 'section2'},
-   {name : 'section3'},
-   {name : 'section4'},
-   {name : 'section5'}
+   {name : 'accueil'},
+   {name : 'services'},
+   {name : 'equipe'},
+   {name : 'materiels'},
+   {name : 'contact'}
 ];
 
 let services = [

@@ -4,26 +4,26 @@
       <div class=" customContainer mx-auto py-6  flex  justify-center relative">
         <div class="absolute left-0 ">
           <div class="absolute top-0 left-0 w-32 h-32 lg:w-48 lg:h-48 -mt-4 ml-1 px-4">
-              <img src="@/assets/images/logo-fond-blanc.png" alt="Logo Bourbon Elagage">
+              <img src="@/assets/images/logo-fond-blanc.png" alt="Logo Bourbon Elagage" title="logo bourbon élagage blanc">
           </div>
             
         </div>
         <ul class="flex ">
           <li>
-            <a href="#section1"  class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('section1')}"
+            <a href="#accueil"  class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('accueil')}"
             >Accueil</a></li>
-             <li><a href="#section2" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('section2')}"
+             <li><a href="#services" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('services')}"
             >Nos services</a></li>
-             <li><a href="#section3" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100  italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('section3')}"
+             <li><a href="#equipe" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100  italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('equipe')}"
             >Notre équipe</a></li>
-            <li> <a href="#section4" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('section4')}"
+            <li> <a href="#materiels" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('materiels')}"
             >Notre matériels</a></li>
-            <li> <a href="#section5" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('section5')}"
+            <li> <a href="#contact" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('contact')}"
             >Contact</a></li>
         </ul>
         <a href="tel:0692 67 76 85" class="absolute right-0 flex items-center -mt-1 mr-2">
@@ -44,7 +44,7 @@
 
     <div class="nav-close md:hidden fixed relative">
         <div class="logo-mobile absolute w-full mt-3">
-            <img :src="require('@/assets/images/logo-mobile.svg')" alt="Logo Bourbon Elagage" >
+            <img :src="require('@/assets/images/logo-mobile.svg')" alt="Logo Bourbon Elagage"  title="logo bourbon élagage mobile">
         </div>
       <div class="nav-close relative">
         
@@ -57,11 +57,11 @@
           </div>
           <div class="nav-close nav-mobile absolute top-0 w-full z-2 py-6 " v-bind:class="{'is-active' : navOpen }">
               <ul class="nav-close text-center">
-                <li><a href="#section1" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section1')}">Accueil</a></li>
-                <li><a href="#section2" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section2')}">Nos services</a></li>
-                <li><a href="#section3" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section3')}">Notre équipes</a></li>
-                <li><a href="#section4" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section4')}">Notre materiel</a></li>
-                <li><a href="#section5" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('section5')}">Contact</a></li>
+                <li><a href="#accueil" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('accueil')}">Accueil</a></li>
+                <li><a href="#services" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
+                <li><a href="#equipe" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('equipe')}">Notre équipes</a></li>
+                <li><a href="#materiels" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('materiels')}">Notre materiel</a></li>
+                <li><a href="#contact" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('contact')}">Contact</a></li>
               </ul>
           </div>
       </div>

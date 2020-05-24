@@ -9,10 +9,10 @@
         v-on:set-active-class="setActiveClass" ></component>
 
         <transition name='modal'>
-          <contactModal ref="contactModal" v-if="contactModalOpen"></contactModal>
+            <contactModal ref="contactModal" v-if="contactModalOpen"></contactModal>
         </transition>
         <transition name='sharemodal'>
-          <shareModal ref="shareModal" v-if="shareModalOpen"></shareModal>
+            <shareModal ref="shareModal" v-if="shareModalOpen"></shareModal>
         </transition>
         
   </div>

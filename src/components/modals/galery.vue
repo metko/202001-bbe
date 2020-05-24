@@ -15,13 +15,13 @@
                
                <div class="flex flex-col justify-center items-center w-full relative h-full mt-4 mb-0"  style="max-height: 65%;">
 
-                    <div @click="prevSelected" class="absolute h-10 w-10  top-0 left-0 z-50 hover:cursor-pointer" style="top:50%; transform:rotate(180deg)" >
+                    <div @click="prevSelected" class="hidden md:block absolute h-10 w-10  top-0 left-0 z-50 hover:cursor-pointer" style="top:50%; transform:rotate(180deg)" >
                        <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                            <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
                         </svg>
                     </div>
 
-                    <div @click="nextSelected" class="absolute h-10 w-10  top-0 right-0 z-50 hover:cursor-pointer" style="top:50%;">
+                    <div @click="nextSelected" class="hidden md:block absolute h-10 w-10  top-0 right-0 z-50 hover:cursor-pointer" style="top:50%;">
                       <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                         <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
                      </svg>

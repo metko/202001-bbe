@@ -16,9 +16,9 @@
              <li><a href="#services" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('services')}"
             >Nos services</a></li>
-             <li><a href="#equipe" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100  italic"
-              v-bind:class="{'is-active text-orange-300' : isActiveClass('equipe')}"
-            >Notre équipe</a></li>
+             <li><a href="#entreprise" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100  italic"
+              v-bind:class="{'is-active text-orange-300' : isActiveClass('entreprise')}"
+            >Notre entreprise</a></li>
             <li> <a href="#materiels" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('materiels')}"
             >Notre matériels</a></li>
@@ -48,7 +48,7 @@
         </div>
       <div class="nav-close relative">
         
-          <div class="menu burger relative z-10 ml-2 pt-2" >
+          <div class="menu burger relative z-10 ml-2 pt-2 w-20" >
               <button @click.prevent="toggleNav()" class="nav-close hamburger hamburger--elastic focus:outline-none " v-bind:class="{'is-active' : navOpen }" type="button">
                   <span class="nav-close hamburger-box">
                     <span class="nav-close hamburger-inner"></span>
@@ -59,7 +59,7 @@
               <ul class="nav-close text-center">
                 <li><a href="#accueil" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('accueil')}">Accueil</a></li>
                 <li><a href="#services" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
-                <li><a href="#equipe" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('equipe')}">Notre équipes</a></li>
+                <li><a href="#entreprise" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('entreprise')}">Notre entreprise</a></li>
                 <li><a href="#materiels" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('materiels')}">Notre materiel</a></li>
                 <li><a href="#contact" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('contact')}">Contact</a></li>
               </ul>

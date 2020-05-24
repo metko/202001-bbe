@@ -1,7 +1,7 @@
 let sections = [
    {name : 'accueil'},
    {name : 'services'},
-   {name : 'equipe'},
+   {name : 'entreprise'},
    {name : 'materiels'},
    {name : 'contact'}
 ];

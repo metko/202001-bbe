@@ -27,7 +27,7 @@ import shareModal from "./components/modals/share.vue"
 
 import accueil from "./components/sections/accueil.vue"
 import services from "./components/sections/services.vue"
-import equipe from "./components/sections/equipe.vue"
+import entreprise from "./components/sections/entreprise.vue"
 import materiels from "./components/sections/materiels.vue"
 import contact from "./components/sections/contact.vue"
 
@@ -36,7 +36,7 @@ import data from './data.js'
 export default {
   name: 'app',
   components: {
-    navigation, actions, accueil, services, equipe, materiels, contact, contactModal, shareModal
+    navigation, actions, accueil, services, entreprise, materiels, contact, contactModal, shareModal
   },
   data(){
     return {

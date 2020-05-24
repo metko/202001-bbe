@@ -25,11 +25,11 @@ import actions from "./components/actions.vue"
 import contactModal from "./components/modals/contact.vue"
 import shareModal from "./components/modals/share.vue"
 
-import accueil from "./components/sections/section1.vue"
-import services from "./components/sections/section2.vue"
-import equipe from "./components/sections/section3.vue"
-import materiels from "./components/sections/section4.vue"
-import contact from "./components/sections/section5.vue"
+import accueil from "./components/sections/accueil.vue"
+import services from "./components/sections/services.vue"
+import equipe from "./components/sections/equipe.vue"
+import materiels from "./components/sections/materiels.vue"
+import contact from "./components/sections/contact.vue"
 
 import data from './data.js'
 

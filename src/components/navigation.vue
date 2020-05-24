@@ -3,9 +3,9 @@
     <div class="hidden md:block w-full " style="background:rgba(255,255,255,.8)">
       <div class=" customContainer mx-auto py-6  flex  justify-center relative">
         <div class="absolute left-0 ">
-          <div class="absolute top-0 left-0 w-32 h-32 lg:w-48 lg:h-48 -mt-4 ml-1 px-4">
+          <a href="#accueil" class="absolute top-0 left-0 w-32 h-32 lg:w-48 lg:h-48 -mt-4 ml-1 px-4">
               <img src="@/assets/images/logo-fond-blanc.png" alt="Logo Bourbon Elagage" title="logo bourbon élagage blanc">
-          </div>
+          </a>
             
         </div>
         <ul class="flex ">
@@ -43,13 +43,13 @@
     </div>
 
     <div class="nav-close md:hidden fixed relative">
-        <div class="logo-mobile absolute w-full mt-3">
+         <a href="#accueil" class="logo-mobile absolute w-full mt-3"  v-bind:class="{'z-50' : !navOpen }">
             <img :src="require('@/assets/images/logo-mobile.svg')" alt="Logo Bourbon Elagage"  title="logo bourbon élagage mobile">
-        </div>
+        </a>
       <div class="nav-close relative">
         
           <div class="menu burger relative z-10 ml-2 pt-2 w-20" >
-              <button @click.prevent="toggleNav()" class="nav-close hamburger hamburger--elastic focus:outline-none " v-bind:class="{'is-active' : navOpen }" type="button">
+              <button @click.prevent="toggleNav()"  class="nav-close hamburger hamburger--elastic focus:outline-none " v-bind:class="{'is-active' : navOpen }" type="button">
                   <span class="nav-close hamburger-box">
                     <span class="nav-close hamburger-inner"></span>
                   </span>
@@ -57,11 +57,10 @@
           </div>
           <div class="nav-close nav-mobile absolute top-0 w-full z-2 py-6 " v-bind:class="{'is-active' : navOpen }">
               <ul class="nav-close text-center">
-                <li><a href="#accueil" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('accueil')}">Accueil</a></li>
-                <li><a href="#services" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
-                <li><a href="#entreprise" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('entreprise')}">Notre entreprise</a></li>
-                <li><a href="#materiels" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('materiels')}">Notre materiel</a></li>
-                <li><a href="#contact" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('contact')}">Contact</a></li>
+                <li><a href="#accueil"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
+                <li><a href="#entreprise"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('entreprise')}">Notre entreprise</a></li>
+                <li><a href="#materiels"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('materiels')}">Notre materiel</a></li>
+                <li><a href="#contact"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('contact')}">Contact</a></li>
               </ul>
           </div>
       </div>

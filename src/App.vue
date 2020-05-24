@@ -7,7 +7,6 @@
         v-bind:is="section.name"
         :section="section"
         v-on:set-active-class="setActiveClass" ></component>
-
         <transition name='modal'>
             <contactModal ref="contactModal" v-if="contactModalOpen"></contactModal>
         </transition>

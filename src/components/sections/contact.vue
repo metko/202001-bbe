@@ -247,6 +247,7 @@ export default {
 
 .carousel-cell {
   height: 200px;
+  @apply border border-orange-100 border-4;
 
 }
 .carousel-cell:hover {

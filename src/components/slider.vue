@@ -20,13 +20,13 @@
                v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}"
             class=" h-full flex flex-wrap w-full">
 
-            <div class="w-full lg:w-3/5 flex flex-col flex-grow">          
+            <div class="w-full lg:w-1/2 flex flex-col flex-grow">          
                <transition :name="animationName" mode="out-in">
                   <component v-bind:is="'contentSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
                </transition>
             </div>
 
-            <div class="w-full lg:w-2/5">
+            <div class="w-full lg:w-1/2">
                <transition :name="animationName" mode="out-in">
                   <component v-bind:is="'imageSlide'" :slide="getSlide(0)" :key="getSlide(0).title"></component>
                </transition>

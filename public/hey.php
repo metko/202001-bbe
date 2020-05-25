@@ -6,7 +6,7 @@ isset($_POST['object']) &&
 isset($_POST['email']) &&
 isset($_POST['message'])) {
 
-  $to = 'thomas.moiluiavon@gmail.com';
+    $to = 'thomas.moiluiavon@gmail.com';
     $subject = $_POST['object'];
     $from = $_POST['email'];
     

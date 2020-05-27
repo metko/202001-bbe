@@ -15,13 +15,13 @@
                
                <div class="flex flex-col justify-center items-center w-full relative h-full mt-4 mb-0"  style="max-height: 65%;">
 
-                    <div @click="prevSelected" class="hidden md:block absolute h-10 w-10  top-0 left-0 z-50 hover:cursor-pointer" style="top:50%; transform:rotate(180deg)" >
+                    <div @click="prevSelected" class="hidden md:block absolute h-10 w-10 top-0 left-0  hover:cursor-pointer" style="top:50%; z-index: 200; transform:rotate(180deg)" >
                        <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                            <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
                         </svg>
                     </div>
 
-                    <div @click="nextSelected" class="hidden md:block absolute h-10 w-10  top-0 right-0 z-50 hover:cursor-pointer" style="top:50%;">
+                    <div @click="nextSelected" class="hidden md:block absolute h-10 w-10  top-0 right-0  hover:cursor-pointer" style=" z-index: 200; top:50%;">
                       <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
                         <polygon class="cls-1 fill-current text-orange-100" points="10.17 8.56 17.68 8.56 28.83 19.81 17.68 30.44 10.17 30.44 20.79 19.81 10.17 8.56"/>
                      </svg>
@@ -29,7 +29,7 @@
 
                      <v-touch v-on:swipeleft="nextSelected" v-on:swiperight="prevSelected"  v-bind:swipe-options="{ direction: 'horizontal', threshold: 2, velocity: .001}" class="w-full h-full  overflow-hidden ">
 
-                        <div class="absolute h-full w-full z-50"></div>
+                        <div class="absolute h-full w-full z-50" :class="{hidden: isVideo}"></div>
                         <img v-if="getSelected.file_type == 'jpg' || getSelected.file_type == 'png' || getSelected.file_type == 'gif'" :src="srcMediaSelected" class="image-selected rounded border border-white" :alt="getSelected.file_alt" :title="getSelected.title" >
                         <div v-else class="h-full w-full">
                            <iframe id="ytplayer" type="text/html" width="100%" height="100%" :src="srcMediaSelected" frameborder="0" allowfullscreen></iframe>
@@ -99,6 +99,12 @@ import Flickity from 'flickity'
                return require('@/assets/images/gallery/'+this.getSelected.file_src)
             }
          },
+
+         isVideo() {
+            if(this.getSelected.file_type == "mp4") return true
+            return false
+         },
+         
          getSelected(){
             return this.medias[this.selected]
          }

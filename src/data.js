@@ -95,7 +95,7 @@ let materiels = [
       // LE CONTENU DE LA SECTION GRIMPE
      tab_name: 'De grimpe',
      title: "Notre matériel de grimpe,</br> <span class='text-orange-100'>controlé  chaque année</span>",
-     content: "<p><span class='font-bold'>Les EPI (Équipements Individuels de Sécurité) sont tout ce qui nous permet de grimper en sécurité</span> dans un arbre (harnais, cordes, connecteurs, griffes, etc.) et qui nous protègent (pantalons et chaussures anti-coupures, casques, etc.).</p><p>Car nous cumulons trois risques graves dans notre métier :<ul><li>- Les chutes de hauteur</li><li>- Les coupures</li><li>- Les risques TMS(troubles Musculo Squelettiques)</li></ul><p><span class='font-bold'>Tout ce matériel est normé, annuellement inspecté par un vérificateur certifié extérieur à l'entreprise, et régulièrement renouvelé</span>.</p><p>Total pour un grimpeur : plus de 5 000€.  Et nous sommes 5 !</p>",
+     content: "<p><span class='font-bold'>Les EPI (Équipements Individuels de Sécurité) sont tout ce qui nous permet de grimper en sécurité</span> dans un arbre (harnais, cordes, connecteurs, griffes, etc.) et qui nous protègent (pantalons et chaussures anti-coupures, casques, etc.).</p><p>Car nous cumulons trois risques graves dans notre métier :<ul><li>- Les chutes de hauteur</li><li>- Les coupures</li><li>- Les risques TMS (Troubles Musculo Squelettiques)</li></ul><p><span class='font-bold'>Tout ce matériel est normé, annuellement inspecté par un vérificateur certifié extérieur à l'entreprise, et régulièrement renouvelé</span>.</p><p>Total pour un grimpeur : plus de 5 000€.  Et nous sommes 5 !</p>",
      images: [
         // LES IMAGES DE LA SECTION GRIMPE
         {
@@ -109,20 +109,13 @@ let materiels = [
            title: "Grimpe 2",
            legend: "L’équipement en cours d’utilisation.",
            alt: "alt attr"
-        },
-        {
-// 3eme photo A SUPRIMER
-           img_url : require("@/assets/images/materiels/grimpe_3.jpg"),
-           title: "Grimpe 3",
-           legend: "Grimpe legend 3",
-           alt: "alt attr"
-        },
+        }
      ]
   },
    {
       tab_name: "De Coupe",
       title: 'Tronçonneuses d’élagage</br> <span class="text-orange-100">et d’abattage</span>',
-      content: "<p>Nous travaillons avec des tronçonneuses STHILL et HUSQVARNA.Pour l’instant elles sont toutes thermiques (c’est à dire à moteur).Mais dans un avenir proche, les tronçonneuses électrique seront réellement au point,tant en matière d’autonomie que de fonctionnement et de robustesse.Et ce sera avec plaisir que nous pourrons enfin travailler dans le silence et sans un pot d’échappement collé sous notre nez en permanence.</p>",
+      content: "<p>Nous travaillons avec des tronçonneuses <span class='font-bold'>STHILL</span> et <span class='font-bold'>HUSQVARNA</span>. Pour l’instant elles sont toutes thermiques (c’est à dire à moteur). Mais dans un avenir proche, les tronçonneuses électrique seront réellement au point, tant en matière d’autonomie que de fonctionnement et de robustesse. Et ce sera avec plaisir que nous pourrons enfin travailler dans le silence et sans un pot d’échappement collé sous notre nez en permanence.</p>",
       images: [
          {
             img_url : require("@/assets/images/materiels/coupe_1.jpg"),

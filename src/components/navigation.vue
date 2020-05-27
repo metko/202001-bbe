@@ -57,7 +57,8 @@
           </div>
           <div class="nav-close nav-mobile absolute top-0 w-full z-2 py-6 " v-bind:class="{'is-active' : navOpen }">
               <ul class="nav-close text-center">
-                <li><a href="#accueil"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
+                <li><a href="#accueil"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('acceuil')}">Accueil</a></li>
+                <li><a href="#services"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('services')}">Nos services</a></li>
                 <li><a href="#entreprise"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('entreprise')}">Notre entreprise</a></li>
                 <li><a href="#materiels"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('materiels')}">Notre materiel</a></li>
                 <li><a href="#contact"  @click="toggleNav()" class="nav-close uppercase px-8 inline-block py-3 text-orange-100" v-bind:class="{'text-orange-300' : isActiveClass('contact')}">Contact</a></li>

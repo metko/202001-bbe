@@ -110,7 +110,8 @@
                      </div>
                </div>
  
-                <div class="text-white text-xs text-center italic mb-6 mx-4">Copyright © Bourbon Elagage 2019 tous droits réserver - Webdesign : <a href="https://www.facebook.com/Laura-Rivière-Graphiste" target="_blanck">Laura Rivière</a> - photos : Laura Rivière et Bourbon élagage - Développement : <a href="www.linkedin.com/in/thomas-moiluiavon" target="_blanck">Thomas M</a></div>
+                <div class="text-white text-xs text-center italic mb-6 mx-4">Bourbon Elagage 2019 © - Tous droits réservés - Web Design : <a href="https://laurariviere-graphiste.com/" target='_blank'> Laura Rivière</a> - Photos :  Bourbon Elagage et <a href="https://laurariviere-graphiste.com/" target='_blank'>Laura Rivière</a> - Développement : Thomas M
+</div>
             </div>
              
          </div>

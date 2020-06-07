@@ -175,7 +175,7 @@
 
 .legend{
    padding: 5px 8px;
-   color: #f07d00;
+   color: #000;
    text-align: center;
    font-size: 13px;
    font-style: italic;

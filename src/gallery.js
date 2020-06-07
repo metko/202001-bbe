@@ -357,7 +357,7 @@ let medias = [
       file_type: 'jpg',
       file_alt: 'Elagage tamarin d\'Inde',
       file_src_cover: '11-TAMARIN_INDE-min.jpg',
-      file_description: "À deux dans le même arbre, en confiance !"
+      file_description: "Époque moderne : toute la panoplie de sécurité est présente, on ne rigole plus avec ça ; et le plaisir est toujours là ! "
    },
 
 
@@ -405,7 +405,7 @@ let medias = [
       file_type: 'jpg',
       file_alt: 'Elagage Grand Pin',
       file_src_cover: '16-AROCARIA-min.jpg',
-      file_description: "Grand Pin Colonaire à deux têtes(Araucaria Columnaris) en bord de route."
+      file_description: "Grand Pin Colonaire à deux têtes (Araucaria Columnaris) en bord de route."
    },
 
 {
@@ -482,7 +482,7 @@ let medias = [
       file_type: 'jpg',
       file_alt: 'Vue de l\'atelier',
       file_src_cover: '25-atelier-min.jpg',
-      file_description: "La vue de l’atelier ;la mer ,la montagne, les champs de canne : mieux qu’à la maison ! "
+      file_description: "La vue de l’atelier ; la mer, la montagne, les champs de canne : mieux qu’à la maison !"
    },
 
 {
@@ -500,7 +500,7 @@ let medias = [
       file_type: 'jpg',
       file_alt: 'Elagage à la nacelle',
       file_src_cover: '27_NACELLE_min.jpg',
-      file_description: "Elagage à la nacelle.."
+      file_description: "Elagage à la nacelle."
    },
 
    {

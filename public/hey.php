@@ -6,7 +6,9 @@ isset($_POST['object']) &&
 isset($_POST['email']) &&
 isset($_POST['message'])) {
 
-    $to = 'thomas.moiluiavon@gmail.com';
+    // $to = 'lilocrea.reunion@gmail.com"';
+    // $to = 'thomas.moiluiavon@gmail.com';
+    $to = 'dsd974@hotmail.com';
     $subject = $_POST['object'];
     $from = $_POST['email'];
     
@@ -24,12 +26,13 @@ isset($_POST['message'])) {
     $message .= '<h1>Un message en provenance de :<strong>'.$_POST['name'].'</strong></h1>';
     $message .= '<p>'.$_POST['message'].'</p>';
     $message .= '</body></html>';
-       if (mail($to, $subject, $message, $headers)) {
+       if ( mail($to, $subject, $message, $headers) ) {
           $response = [
            'statut' => 'success',
            'message' => 'Message bien envoyé',
         ];
-        mail("lilocrea.reunion@gmail.com", $subject, $message, $headers);
+        // mail("lilocrea.reunion@gmail.com", $subject, $message, $headers);
+     
         echo json_encode($response);
 
         exit();

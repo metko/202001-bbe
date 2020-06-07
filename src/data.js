@@ -141,7 +141,7 @@ let materiels = [
       //  SECTION ENGIN 
       tab_name: "Roulant",
       title: 'Une flotte <span class="text-orange-100">de véhicule</span> ',
-      content: "<p>Pour un service efficace et réactif, notre flotte se compose de plusieurs éléments :<ul><li>- Une fourgonnette Peugeot Expert pour le transport et pour l'établissement des devis.</li><li>- Des camions 3.5T Iveco pour le transport des rémanents (troncs, branches, broyat)</li><li>- Des pickups Hilux pour le transport du personnel, de leur matériel et du broyeur.</li><li>- Une nacelle Iveco pour soulager les grimpeurs et réaliser certains chantiers spécifiques.</li></ul></p><p>Nous pouvons ainsi intervenir dans les lieux les plus reculés, <span class='font-bold'>notamment pour rétablir rapidement le courant après les cyclones</span> (chantiers avenotre partenaire EDF depuis 2006).</p>",
+      content: "<p>Pour un service efficace et réactif, notre flotte se compose de plusieurs éléments :<ul><li>- Une geot Expert pour le transport et pour l'établissement des devis.</li><li>- Des camions 3.5T Iveco pour le trfourgonnette Peuansport des rémanents (troncs, branches, broyat)</li><li>- Des pickups Hilux pour le transport du personnel, de leur matériel et du broyeur.</li><li>- Une nacelle Iveco pour soulager les grimpeurs et réaliser certains chantiers spécifiques.</li></ul></p><p>Nous pouvons ainsi intervenir dans les lieux les plus reculés, <span class='font-bold'>notamment pour rétablir rapidement le courant après les cyclones</span> (chantiers avec notre partenaire EDF depuis 2006).</p>",
       images: [
          // LES IMAGES DE LA SECTION ENGEIN
          {

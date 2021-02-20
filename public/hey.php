@@ -8,7 +8,7 @@ isset($_POST['message'])) {
 
     // $to = 'lilocrea.reunion@gmail.com"';
     // $to = 'thomas.moiluiavon@gmail.com';
-    $to = 'dsd974@hotmail.com';
+    $to = 'contact@bourbonelagage.re';
     $subject = $_POST['object'];
     $from = $_POST['email'];
     

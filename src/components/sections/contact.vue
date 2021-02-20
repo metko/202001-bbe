@@ -70,14 +70,15 @@
                          <img :src="require('@/assets/images/logo-be-1.svg')" alt="" title="" class="w-full -mt-10"/>
                      </div>
                      <div  class="w-full lg:w-2/5  mt-16 lg:mt-0">
-                        <h3 class="title text-white text-xl italic lg:text-right">Nous intervenons dans les régions <span class="text-orange-300">ouest et sud</span>. Pour toutes demandes d’informations nous contacter!</h3>
+                        <h3 class="title text-white text-xl italic lg:text-right">Nous intervenons dans les régions <span class="text-orange-300">ouest et sud</span>. </h3>
+                        <span class='title text-white text-xl italic lg:text-right block'>Pour toutes demandes d’informations nous contacter !</span>
                         <div class="flex lg:justify-end my-6">
                            <div class="mr-3 mt-1">
                               <svg class="fill-current text-white  inline-block h-8 w-8 -mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                                   <path class="cls-1" d="M16.74,44.33a1,1,0,0,1-.46-.12.94.94,0,0,1-.49-1L17.67,29l.45-2.19A.9.9,0,0,1,18,26.5L16.65,25,8.06,14.42a1,1,0,0,1,.81-1.56L47.3,15.58a1,1,0,0,1,.84.66,1,1,0,0,1-.28,1L17.37,44.09A.94.94,0,0,1,16.74,44.33ZM20,27.07l-.47,2.27L18,41,42.9,19.07ZM10.94,14.93l7.15,8.85,1.38,1.45,23.05-8.06Z"/>
                               </svg>  
                            </div>
-                           <div><a href="mailto:dsd974@hotmail.com" class="text-white underline text-xl">dsd974@hotmail.com</a></div>
+                           <div><a href="mailto:contact@bourbonelagage.re" class="text-white underline text-xl">contact@bourbonelagage.re</a></div>
                         </div>
                         <div class="flex lg:justify-end my-6">
                            <div class="mr-3 ">
@@ -100,13 +101,25 @@
                               </svg>
                            </div>
                            <div class=" text-left lg:text-right">
-                              <a href="https://goo.gl/maps/7umgERgYxMFzZVzX6" target="_blank" class="text-white underline text-xl">Bourbon Elagage</a>
+                              <a href="https://www.google.com/maps/place/Bourbon+Elagage/@-21.0794172,55.2712441,17z/data=!3m1!4b1!4m5!3m4!1s0x2182912dffb5d0c3:0xaeb1815352fc61cf!8m2!3d-21.0794172!4d55.2734328" target="_blank" class="text-white underline text-xl">Bourbon Elagage</a>
                               <div class="text-white  text-xl">46 rue du lycée</div>
                               <div class="text-white  text-xl">97422 la Saline</div>
                               <div class="text-white  text-xl">Île de la Réunion </div>
                            </div>
                            
                         </div>
+
+                        <div class="flex lg:justify-end my-6">
+                           <a href="https://www.youtube.com/channel/UCW4GffhP01g_rdXBpCLYh7w" target="_blank" class='text-orange-700 w-8 hover:text-white'>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path id="YOUTUBE" class="fill-current" d="M13.33,1.2H6.73a5.5,5.5,0,0,0-5.5,5.5v6.6a5.5,5.5,0,0,0,5.5,5.5h6.6a5.5,5.5,0,0,0,5.5-5.5V6.7A5.5,5.5,0,0,0,13.33,1.2Zm3.74,12.1A3.75,3.75,0,0,1,13.33,17H6.73A3.75,3.75,0,0,1,3,13.3V6.7A3.75,3.75,0,0,1,6.73,3h6.6A3.75,3.75,0,0,1,17.07,6.7ZM14.79,6.84a1.54,1.54,0,0,0-1.06-.45c-1.48-.1-3.7-.1-3.7-.1h0s-2.22,0-3.7.1a1.54,1.54,0,0,0-1,.45,2.25,2.25,0,0,0-.42,1A15.24,15.24,0,0,0,4.75,9.6v.8a15.48,15.48,0,0,0,.11,1.71,2.25,2.25,0,0,0,.42,1.05,1.82,1.82,0,0,0,1.16.45c.85.08,3.59.1,3.59.1s2.22,0,3.7-.11a1.47,1.47,0,0,0,1.06-.44,2.37,2.37,0,0,0,.42-1.05,17,17,0,0,0,.1-1.71V9.6a16.74,16.74,0,0,0-.1-1.71A2.37,2.37,0,0,0,14.79,6.84ZM8.94,11.37v-3l2.85,1.49Z"/></svg>                           
+                           </a>
+
+                           <a href="https://www.facebook.com/bourbonelagage" target="_blank" class='text-orange-700 w-8 hover:text-white ml-1'>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path id="FACEBOOK" class='fill-current' d="M13.3,1.2H6.7A5.5,5.5,0,0,0,1.2,6.7v6.6a5.5,5.5,0,0,0,5.5,5.5h6.6a5.5,5.5,0,0,0,5.5-5.5V6.7A5.5,5.5,0,0,0,13.3,1.2ZM17,13.3A3.75,3.75,0,0,1,13.3,17H11.38V12.62h2l.39-2.54H11.38V8.42a1.27,1.27,0,0,1,1.43-1.37h1.11V4.88a13.73,13.73,0,0,0-2-.17A3.11,3.11,0,0,0,8.62,8.14v1.94H6.39v2.54H8.62V17H6.7A3.75,3.75,0,0,1,3,13.3V6.7A3.75,3.75,0,0,1,6.7,3h6.6A3.75,3.75,0,0,1,17,6.7Z"/></svg>
+                           </a>
+                           
+                        </div>
+                        
                      </div>
                </div>
  

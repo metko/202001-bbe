@@ -21,7 +21,7 @@
             >Notre entreprise</a></li>
             <li> <a href="#materiels" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('materiels')}"
-            >Notre matériels</a></li>
+            >Notre matériel</a></li>
             <li> <a href="#contact" class="link-nav  px-2 lg:px-5 uppercase  text-orange-100 italic"
               v-bind:class="{'is-active text-orange-300' : isActiveClass('contact')}"
             >Contact</a></li>

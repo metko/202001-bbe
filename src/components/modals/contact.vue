@@ -10,11 +10,11 @@
       </div>
       <div class="container mx-auto flex flex-wrap mt-10 lg:mt-0 ">
          <div class=" w-full lg:w-1/2 px-10 ">
-            <div class="title text-white text-3xl">Contacter-nous!</div>
+            <div class="title text-white text-3xl">Contactez-nous !</div>
             
             <div class="title text-orange-300 italic text-xl mb-6">Devis gratuit sur rendez-vous</div>
             <div class="title text-white italic mb-6">Prenez rendez-vous pour <span class="text-orange-300">connaître notre expertise</span>  et répondre au mieux à votre demande. Nous intervenons dans les régions <span class="text-orange-300">ouest et sud</span>. <br>
-            Pour toutes demandes d'informations nous contacter!
+            Pour toutes demandes d'informations nous contacter !
             </div>
             <div class=" w-full">
                 <transition name="slide-top" mode="out-in">
@@ -30,7 +30,7 @@
                      @verify="onVerify"
                      :loadRecaptchaScript="true"></vue-recaptcha>
                  <div class="flex justify-end">
-                     <button :disabled="!formIsValid()" v-bind:class="{'opacity-25' : !formIsValid()}"
+                     <button :disabled="!formIsValid()" v-bind:class="{'opacity-50' : !formIsValid()}"
                      class="bg-red-100 px-3 py-2 text-white relative flex items-center bg-orange-600 hover:bg-orange-700 italic" >
                         Envoyer
                         <svg class="fill-current text-white  inline-block h-8 w-8 -mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">

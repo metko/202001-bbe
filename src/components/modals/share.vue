@@ -12,7 +12,7 @@
 
          <div class="container mx-auto flex flex-wrap lg:mt-0 items-center h-full">
                 <div class="w-full  lg:w-1/2 lg:mx-auto  bg-orange-100 rounded p-10">
-                     <div class="title text-white text-3xl text-center">Contacter-nous!</div>
+                     <div class="title text-white text-3xl text-center">Contactez-nous !</div>
                      <div class="flex mt-4">
                            <div class="w-1/3 flex justify-center">
                               <a href="whatsapp://send?text=Bonjour,%0D%0ACe%20site%20pourrait%20t’intéresser.%0D%0Ahttps://bourbonelagage.re%0D%0A%0D%0ABonne%20journée," data-action="share/whatsapp/share" class="inline-block bg-green-500 rounded flex justify-center items-center px-2">
